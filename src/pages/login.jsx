@@ -1,6 +1,6 @@
 
 
-
+import {useNavigate } from "react-router-dom"
 import { useState,useEffect } from "react";
 import '../App.css';
 import { Sidebar } from "../components/sidebar";
@@ -11,6 +11,7 @@ import {redirect, useNavigate } from "react-router-dom"
 
 
 function Login() {
+    const history = useNavigate();
     const history = useNavigate();
     const [visi    ,setvisi] = useState(false)
 
@@ -23,7 +24,7 @@ function Login() {
         const logincred ={email,password}
         
     
-         const response = await fetch('/login',{
+         const response = await fetch('https://audioback.onrender.com/login',{
              method:"POST",
              body :JSON.stringify(logincred),//convert to json from object
              headers:{
@@ -37,7 +38,7 @@ function Login() {
          if (response.ok){
             
             
-            window.location.href = "http://localhost:3000/";
+            history("/");
             
             }
        }
