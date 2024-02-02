@@ -12,7 +12,7 @@ function Home() {
     useEffect( ()=>{
         const fetchtodo  = async ()=>{
                   
-                const response = await fetch ('/podcast')
+                const response = await fetch ('https://audioback.onrender.com/podcast')
                 const json = await response.json()
                 
                 
