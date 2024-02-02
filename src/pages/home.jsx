@@ -19,7 +19,7 @@ function Home() {
         
                 if(!response.ok){
                      
-                    window.location.href = "http://localhost:3000/login"; 
+                    window.location.href = "https://audio-front.onrender.com/login"; 
                    
                    }
                 if(response.ok){
