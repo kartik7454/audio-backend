@@ -26,11 +26,11 @@ function Login() {
     
          const response = await fetch('https://audioback.onrender.com/login',{
              method:"POST",
-             credentials: 'include',
+            
              body :JSON.stringify(logincred),//convert to json from object
              headers:{
-                 'Content-Type':'application/json',
-                 'Access-Control-Allow-Origin': "https://audioback.onrender.com/"
+                 'Content-Type':'application/json'
+                 
              }
          })
          const json = await response.json()
