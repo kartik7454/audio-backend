@@ -29,7 +29,8 @@ function Login() {
              credentials: 'include',
              body :JSON.stringify(logincred),//convert to json from object
              headers:{
-                 'Content-Type':'application/json'
+                 'Content-Type':'application/json',
+                 Access-Control-Allow-Origin: *
              }
          })
          const json = await response.json()
