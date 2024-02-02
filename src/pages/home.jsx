@@ -2,11 +2,13 @@
 
 
 import { useState,useEffect } from "react";
+import {useNavigate } from "react-router-dom"
 import '../App.css';
 import { Sidebar } from "../components/sidebar";
 import { Podcastbox } from "../components/podcastbox";
 
 function Home() {
+    const history = useNavigate();
     const [state, setstate] = useState('all')
     const [Podcast, setPodcast] = useState(null)
     useEffect( ()=>{
@@ -19,7 +21,7 @@ function Home() {
         
                 if(!response.ok){
                      
-                    window.location.href = "https://audio-front.onrender.com/login"; 
+                   history("/login")
                    
                    }
                 if(response.ok){
