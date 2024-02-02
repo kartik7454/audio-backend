@@ -30,7 +30,7 @@ function Login() {
              body :JSON.stringify(logincred),//convert to json from object
              headers:{
                  'Content-Type':'application/json',
-                 'Access-Control-Allow-Origin': "*"
+                 'Access-Control-Allow-Origin': "https://audioback.onrender.com/"
              }
          })
          const json = await response.json()
