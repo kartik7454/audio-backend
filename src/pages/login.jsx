@@ -11,7 +11,7 @@ import {redirect, useNavigate } from "react-router-dom"
 
 
 function Login() {
-    const history = useNavigate();
+    
     const history = useNavigate();
     const [visi    ,setvisi] = useState(false)
 
