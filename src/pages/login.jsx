@@ -1,9 +1,15 @@
-import '../App.css';
-import { useState } from "react";
-import Navbar from "../components/navbar";
-import {useNavigate } from "react-router-dom"
 
-var alo = null
+
+
+import { useState,useEffect } from "react";
+import '../App.css';
+import { Sidebar } from "../components/sidebar";
+import { Podcastbox } from "../components/podcastbox";
+import {redirect, useNavigate } from "react-router-dom"
+
+
+
+
 function Login() {
     const history = useNavigate();
     const [visi    ,setvisi] = useState(false)
@@ -26,29 +32,34 @@ function Login() {
          })
          const json = await response.json()
          if (!response.ok){
-             console.log(json.error)
-             setvisi("true")}
+           alert("email does not exist /wrong password ")
+             }
          if (response.ok){
-        console.log("loggedin ")
-            alo = json.mssg
-            history("/")}
+            
+            
+            window.location.href = "http://localhost:3000/";
+            
+            }
        }
-return(<div><Navbar />
+return(<div className="loginbox">
 <form onSubmit={handleSubmit}>
     <div className="login">
 <div><h1>login</h1></div>
 <div><label>email</label></div>
-    <input type="email" placeholder="e-mail" id= "email2"  required></input>
+    <input type="email" maxlength="50" placeholder="e-mail" id= "email2"  required></input>
     
     <div><label>password</label></div>
-    <div><input type="password" placeholder="password" id ="password2" required></input>
+    <div><input type="password" maxlength="10" placeholder="password" id ="password2" required></input>
     </div>
     <br></br>
-    <div><button>submit</button></div>
+    <div><button className="submit">SUBMIT</button></div>
     </div></form>
+    <br></br>
+    <a href="http://localhost:3000/register">register</a>
 
-    <div className= {"errormssg " + (visi ? 'show' : 'hidden')}><h3>email does not  exists</h3></div>
+    
     </div>
-)}
+)
+}
 
-export {Login,alo} ;
+export {Login}  ;

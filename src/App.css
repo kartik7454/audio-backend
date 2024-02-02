@@ -1,75 +1,182 @@
-.App {
-  text-align: center;
-}
-
-.navbar{display: inline-flex;
-  background-color: rgb(232, 228, 228);
-height:100px}
-.i1{width: 500px;}
-.i2{width:200px;
-   cursor:pointer;}
-.i3{width:200px;
-  cursor:pointer;}
-.i4{width:200px;
-  cursor:pointer;}
-
+body{background-color: #1C1C2B;}
+.sidebar{background-color: #171720;
+  height: 100%; 
+  width:15%; 
+  position: fixed; 
  
 
-  .todolist{background-color: rgb(223, 226, 226);
-  width: 500px;
-  border-style: solid;
-  border-width: 1px;
-  margin-bottom: 150px;
+  padding-top: 20px;
+  padding: 6px 8px 6px 25px; 
+  line-height: 50px;
+  color: #B3B4BC;
+  font-size: 10px;
+  display: block;}
 
-position: relative;
-left:500px;
-top:50px}
+  .title{font-size: 70px;
+  }
 
-.todocheck{position: relative;
+  .topbar{background-color: #1F1F2B;
+    margin-top: 0px;
+    height: 70px;
+  margin-left: 17%;
+box-shadow: 10px 10px 10px #191927;}
+
+.podcastcontainer{background-color: #181822;
+width: 79%;
+border-radius: 15px;
+margin-left: 19%;
+margin-bottom: 20PX;
+padding-bottom: 20PX;}
+
+.alo{background-color: aqua;}
+
+.Podcastbox{display:inline-block;
+  background-color: #141015;
+width: 22%;
+margin-left: 17px;
+margin-top: 20PX;
+color: #CCC8CD;
+text-overflow:initial;
+padding: 10px 5px 5px 10px;
+border-radius: 10px;}
+
+.desc{
+width:100%;
+height:70px;
+
+word-wrap:break-word ;
+;}
+
+.ptitle{width:100%;
+  height:50px;
+  margin-bottom: 30PX;
   
-right:230px;
-top:42px}
-
-.todoitem{
-width:460px;
-position: relative;
-left:40px;
-text-align: left;
-text-overflow: hidden    ;
-
+  word-wrap:break-word;
 }
 
-.login,.register{background-color: aqua;
-width:500px;
-height:350px;
+.pimg{height: 170px;
+width: 99%;
+border-radius: 5px;}
+.uploadbox{background-color:#141015;
+  color: #CCC8CD;
+  padding-left: 2%;
+  width:40%;
+  height: 60%;
+  padding-top:30px ;
+  text-transform:uppercase;
+  border-radius: 15px;
+  
 position: absolute;
-left:700px;
-top:250px}
+left: 30%;
+top:10%}
+.uploadbox  input{margin-top: 10px;}
+.uploadbox  select{margin-top: 10px;}
+  
+.loginbox{background-color: #171720;
+height: 500px;
+width: 500px;
+position:absolute;
+left: 33%;
+top:20%;
+padding-left: 30px;
+color: #B3B4BC;
+text-transform: uppercase;}
 
-.errormssg{width: 200px;
-height:70px ;
-background-color:red;
-position: absolute;
-top:480px;
-right: 870px;}
+.mainlinks{  color: #B3B4BC;
+text-decoration: none;
+text-transform:uppercase;
+cursor: pointer;}
+.uploadtitle{height:30px;
+  width :500px;
+display: block;}
+.uploaddesc{height:30px;
+  width :500px;
+  display: block;}
+#fileInput{display: block;}
+#fileInput2{display: block;}
+.inputsel{display: block;
+}
+.filterbtndiv{
+  margin-left: 33%;
+margin-bottom: 15px;}
+  #searchbar{HEIGHT:35PX;
+    width:600px;
+    margin-bottom: 20px;
+  border-radius: 30px;
+    margin-left: 35%;}
+    #username{height:30px;
+    width: 300px;
+    margin-bottom: 10px;
+ }
+    #email{height:30px;
+      width: 300px;
+      margin-bottom: 10px;}
+    #password{height:30px;
+      width: 300px;
+      margin-bottom: 10px;}
 
-.show{visibility: visible;}
-.hidden{visibility:hidden;}
+      
+        #email2{height:30px;
+          width: 300px;
+          margin-bottom: 10px;}
+        #password2{height:30px;
+          width: 300px;
+          margin-bottom: 10px;}
+          .submit{height: 30px;
+          width: 80px;
+        font-weight: bold;}
 
-.deletebtn{position: relative;
-bottom:40px;
-left:200px}
+        .filterbtn{text-transform:capitalize;
+        height: 37px;
+        width: 120px;
+      margin-right: 10px;
+    font-weight: bold;
+    border-radius: 120px;
+    background-color: inherit;
+    border-style: solid;
+    color:#B3B4BC;
+    border-color: #B3B4BC;
+    border-width:2px
+  }
+  
+  .favbtn{background-color: inherit;
+  width: 30px;
+border-radius: 30px;
+color: #B3B4BC;;
+text-align:center;
+padding-top: 5px;
+border-color: #B3B4BC;
+border-style: solid;
+border-width: 1px;
+position:relative;
+bottom:300px;
+left:225px;
+margin-bottom: -60px;}
+.delbtn{color:#B3B4BC;
+background-color: inherit;}
+.searchbtn{
+ 
+ height:30px;
+ background-color: inherit;
+ border-radius: 30px;
+ border-style: solid;
+ position: relative;
 
-#addtodo{height:30px;
-margin-top: 50px;
-width: 440px;
+ right:40px;
+ border-width: 2px;
+}
+
+#ut{color: #b3b4bc;
 position: relative;
-left:-15px}
+top: 20px;
+left:450px}
+.video{margin-left: 70px;
+}
 
+.vidtitle{color:#B3B4BC;
+margin-left: 100px;}
+.viddesc{color:#B3B4BC;
+  margin-left: 100px;
+  width: 1300px;
 
-.addbtn{height:36px;
-width:45px;
-position: relative;
-left:-15px}
-
-.checked{text-decoration: line-through;}
+word-wrap: break-word;}
